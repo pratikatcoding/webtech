@@ -1,1 +1,2 @@
-# webtech
+# web-tech
+All practical assignments 
