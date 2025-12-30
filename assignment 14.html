@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FizzBuzz</title>
+</head>
+<body>
+
+  <h2>FizzBuzz (1 to 100)</h2>
+  <button onclick="runFizzBuzz()">Run FizzBuzz</button>
+
+  <pre id="output"></pre>
+
+  <script>
+    function runFizzBuzz() {
+      let result = "";
+
+      for (let i = 1; i <= 100; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+          result += "FizzBuzz\n";
+        } else if (i % 3 === 0) {
+          result += "Fizz\n";
+        } else if (i % 5 === 0) {
+          result += "Buzz\n";
+        } else {
+          result += i + "\n";
+        }
+      }
+
+      document.getElementById("output").textContent = result;
+    }
+  </script>
+
+</body>
+</html>

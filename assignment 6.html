@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ticket Price Calculator</title>
+</head>
+<body>
+
+  <h2>Ticket Price Calculator</h2>
+
+  <input type="number" id="age" placeholder="Enter your age">
+  <br><br>
+
+  <button onclick="calculatePrice()">Calculate Price</button>
+
+  <p id="result"></p>
+
+  <script>
+    function calculatePrice() {
+      const ageInput = document.getElementById("age").value;
+
+      if (ageInput === "") {
+        document.getElementById("result").textContent = "Please enter your age.";
+        return;
+      }
+
+      const age = Number(ageInput);
+      let price;
+
+      if (age < 0) {
+        price = "Invalid age.";
+      } else if (age < 12) {
+        price = "Ticket Price: $5";
+      } else if (age < 18) {
+        price = "Ticket Price: $10";
+      } else if (age < 60) {
+        price = "Ticket Price: $20";
+      } else {
+        price = "Ticket Price: $15";
+      }
+
+      document.getElementById("result").textContent = price;
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Array Iteration</title>
+</head>
+<body>
+
+  <h2>Array Iteration using for...of</h2>
+  <button onclick="iterateArray()">Show Array Elements</button>
+
+  <ul id="output"></ul>
+
+  <script>
+    function iterateArray() {
+      const fruits = ["Apple", "Banana", "Orange", "Mango", "Grapes"];
+      const outputList = document.getElementById("output");
+
+      // Clear previous results
+      outputList.innerHTML = "";
+
+      for (const fruit of fruits) {
+        const li = document.createElement("li");
+        li.textContent = fruit;
+        outputList.appendChild(li);
+      }
+    }
+  </script>
+
+</body>
+</html>
